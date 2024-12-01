@@ -15,5 +15,6 @@ int main() {
   printf("Length of the string: %d\n", l);
   str[l - 1] = 'y';
   printf("string without null character: %s\n", str);
+  scanf("%c", &c);
   return 0;
 }
