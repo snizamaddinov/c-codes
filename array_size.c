@@ -18,3 +18,26 @@ int main() {
   scanf("%c", &c);
   return 0;
 }
+
+
+char getUserInput(){
+  printf("Enter a letter: ");
+  char guess, enter;
+  scanf("%c", &guess);
+  getchar();
+
+  return guess;
+}
+
+int checkGuessedLetter(Word* gameWord, char guess){
+  int found = 0;
+
+  for (int i = 0; i < strlen(gameWord->target); ++i) {
+      if (guess == gameWord->target[i]){
+          found = 1;
+          gameWord->guessed[i] = guess;
+      }
+  }
+
+  return found;
+}
